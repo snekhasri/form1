@@ -1,0 +1,32 @@
+<h2>FORM REGISTRATION</h2>
+<p><span class="error"># required field</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+ <b> Name:</b> <input type="text" name="name" >
+  <span class="error">#<?php echo $nameErr;?></span>
+  <br><br>
+  <b>D.O.B:</b><input type="text" name="dob" >
+   <span class="error">#<?php echo $dobErr;?></span>
+   <br><br>
+   <b>Address:</b> <textarea type="text" name="add" rows="4" cols="20" ></textarea>
+  <span class="error">#<?php echo $addErr;?></span>
+  <br><br>
+  
+  <b>E-mail:</b> <input type="text" name="email">
+  <span class="error">#<?php echo $emailErr;?></span>
+  <br><br>
+  <b>PhoneNo:</b> <input type="text" name="phone">
+  <span class="error">#<?php echo $phoneErr;?></span>
+  <br><br>
+  <b>Website:</b> <input type="text" name="website">
+  <span class="error"><?php echo $websiteErr;?></span>
+  <br><br>
+ <b> Comment:</b> <textarea name="comment" rows="5" cols="40"></textarea>
+  <br><br>
+  <b>Gender:</b>
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="other">Other
+  <span class="error"># <?php echo $genderErr;?></span>
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
